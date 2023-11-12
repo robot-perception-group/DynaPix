@@ -1,0 +1,15 @@
+/Examples
+/examples
+/mask
+/mask_norm2
+/result
+/models
+/Data
+/RGB*
+/checkpoints
+config1.yaml
+config2.yaml
+__pycache__
+*__pycache__
+*.bag
+*.png

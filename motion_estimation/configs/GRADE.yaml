@@ -1,0 +1,8 @@
+path: "" # experiment rosbags
+output_path: ""
+camera: [640, 480, 325.9103, 399.3103, 320, 240] #[WIDTH, HEIGHT, FX, FY, CX, CY]
+
+# instance related params
+instance: False
+mapping_file: "configs/mapping.pkl" # Relatiave path to mapping.pkl
+object_classes: ['human', 'google', 'shapenet'] # Objects we want to detect
