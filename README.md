@@ -1,4 +1,10 @@
-# DynaPix SLAM
+<p align="center">
+
+  <h1 align="center">DynaPix SLAM: A Pixel-Based Dynamic Visual SLAM Approach</h1>
+  <div align="center">
+    <img src="arch.png" alt="Logo" width="100%">
+  </div>
+</p>
 DynaPix SLAM is the approach towards dynamic environments based on ORB-SLAM2 framework. This repository main includes the code for DynaPix SLAM, DynaPix-D SLAM, and corresponding motion estimation module, where the specific instructions are inside each folder.
 
 ## Test Data
