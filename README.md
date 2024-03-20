@@ -1,19 +1,28 @@
 <p align="center">
 
   <h1 align="center">DynaPix SLAM: A Pixel-Based Dynamic Visual SLAM Approach</h1>
-   <h3 align="center">
-    <a href="https://kyle-xu001.github.io/"><strong>Chenghao Xu*</strong></a>
-    ·
-    <a href="https://eliabntt.github.io/"><strong>Elia Bonetto*</strong></a>
-    ·
-    <a href="https://www.aamirahmad.de/"><strong>Aamir Ahmad</strong></a>
-  </h3>
-  <p align="center"> (* Equal Contribution) </p>
   <div align="center">
     <img src="arch.png" alt="Logo" width="100%">
   </div>
 </p>
-DynaPix SLAM is the approach towards dynamic environments based on ORB-SLAM2 framework. This repository main includes the code for DynaPix SLAM, DynaPix-D SLAM, and corresponding motion estimation module, where the specific instructions are inside each folder.
+Visual SLAM methods often encounter challenges in scenes with moving objects that severely affect their core modules. To avoid that, Dynamic V-SLAM approaches often apply semantic information, geometric constraints, or optical flow to exclude dynamic elements. However, heavy reliance on precise segmentation and the a-priori inclusion of selected classes, along with the inability to recognize unknown or unexpected moving objects, often degrade their performance.
+
+To address this, we introduce DynaPix, a novel visual SLAM system based on per-pixel motion probability estimation. Our approach consists of semantic-free estimation module and an improved pose optimization process. The motion probability estimation is achieved through a novel static background differencing method on both images and optical flows from splatted frames. DynaPix fully integrates those motion probabilities into the tracking and optimization modules based on ORB-SLAM2 framework.
+
+## Test Dataset & Results
+The details of all reported experiments are available [here](https://docs.google.com/spreadsheets/d/1U17h2E4B3n4F_5GlqwzeLfyTZJXzkuGsULJei4SDDGU/edit?usp=sharing). (including additional results from other methods for reference)
+
+We provide two sequences [here](https://drive.google.com/drive/folders/1P0XqJlqzV9Td4lYP0-Q_BVkSz7u8TzQR?usp=drive_link) for testing, involving the `FH` sequence from GRADE dataset and `halfsphere` sequence from TUM RGBD dataset, which have following structure:
+```
+Sequence
+    ├── rgb/     # images in dynamic scenes
+    ├── background/     # images with static background
+    ├── prob/     # estimated motion probability for SLAM
+    ├── depth/     # depth map
+    ├── (depth_bg)/     # depth map for static background
+    ├── groundtruth.txt     # camera pose groundtruth
+    └── association.txt     # correspondence between depth and rgb images
+```
 
 ## Motion Probability Estimation
 - Generate motion probability on GRADE dataset
