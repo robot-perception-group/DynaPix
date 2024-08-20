@@ -60,8 +60,8 @@ DynaPix is derived from ORB-SLAM2, while DynaPix-D is derived from DynaSLAM. In 
       title={DynaPix SLAM: A Pixel-Based Dynamic SLAM Approach}, 
       author={Chenghao Xu and Elia Bonetto and Aamir Ahmad},
       year={2023},
-      eprint={2309.09879},
       url={https://arxiv.org/abs/2309.09879},
-      copyright = {arXiv.org perpetual,non-exclusive license}
+      note={to appear},
+      booktitle={DAGM German Conference on Pattern Recognition 2024}
 }
 ```
